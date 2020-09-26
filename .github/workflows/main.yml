@@ -30,4 +30,4 @@ jobs:
     - name: Installing surge
       run:  npm install --global surge
     - name: depolying using surge
-      run: surge ./javascript-animation-4a.surge.sh/ --token ${{secrets.SURGE}}
+      run: surge ./ javascript-animation-4a.surge.sh/ --token ${{secrets.SURGE}}
