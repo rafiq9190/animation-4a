@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation 4a</title>
+    <style>
+        .car-first{
+            position: absolute;
+            top:590px;
+            z-index: 2;
+        }
+        .car-second{
+            position: absolute;
+            top:620px;
+            z-index: 2;
+        }
+        .car-third{
+            position: absolute;
+            top:650px;
+            z-index: 4;
+        }
+        .car-forth{
+            position:absolute;
+            top:600px;
+            z-index: 3;
+        }
+        .birds-1{
+            position: absolute;
+            top: 181px;
+             right: 9px;
+
+        }
+        .plane{
+            position: absolute;
+            left: -15px;
+        }
+    </style>
+</head>
+<body>
+    <div id="background">
+        <img src="./gettyimages-927006044-612x612.jpg" width="100%" height="auto"/>
+        <img src="./birds-1.gif" id="birds-1" class="birds-1">
+        <img src="./plane.gif" width="350px" class="plane" id="plane"/>
+
+        
+    </div>
+    <div id="road">
+        <img src="./8620750b616c6abe-moving-car-gif-13-gif-images-download.gif" width="200px" id="car-first" class="car-first"/>
+        <img src="./car-3.gif" width="300px" id=car-second class="car-second"/>
+        <img src="./moving-car 2.gif" width="250px" id="car-third" class="car-third"/>
+    </div>
+   
+
+
+
+            <script>
+                let firstCar=document.getElementById('car-first');
+                firstCar.animate([
+                    {transform:'translate(1150px,0)'},
+                    {transform:'translate(-1100px,0)'},
+                    
+                ],{
+                    duration: 4000,
+                    iterations: Infinity
+                })
+
+                let carSecond=document.getElementById('car-second');
+                carSecond.animate([
+                    {transform:'translate(1150px,0)'}
+                ],{
+                    duration:3000,
+                    iterations:Infinity
+                })
+
+                let carThird=document.getElementById('car-third');
+                carThird.animate([
+                    {transform:'translate(1200px,0)'}
+                ],{
+                    duration:2000,
+                    iterations:Infinity
+                })
+
+            
+
+                var firstBirds=document.getElementById('birds-1');
+
+                firstBirds.animate([
+                {transform:'translate(-1150px,0)'}
+                ],{
+                    duration:4000,
+                    iterations:Infinity
+                })
+                 
+                 var plane=document.getElementById('plane');
+                 plane.animate([
+                     {
+                         transform:'translate(1200px,0)',
+                         
+                     },
+                    
+                 ],{
+                    duration:5000,
+                    iterations:Infinity
+                 })
+
+            </script>
+</body>
+</html>
